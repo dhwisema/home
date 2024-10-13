@@ -17,7 +17,18 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
+    vesktop
+    git
+    lazygit
+    filezilla
+    nixd
+    vscodium
+    bitwarden
+    google-chrome
+    ranger
+
+
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -68,7 +79,7 @@
   #  /etc/profiles/per-user/howard/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "vscodium";
   };
 
   # Let Home Manager install and manage itself.
